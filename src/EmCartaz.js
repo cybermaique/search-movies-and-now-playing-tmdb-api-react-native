@@ -26,10 +26,12 @@ export default function EmCartaz() {
       })
     }
 
+    useEffect(() => {
+        Filmes()
+    }, [])
 
     return (
-        <View>
-           <ScrollView>
+        <ScrollView>
         {state.results.map(result => ( //puxa filme pesquisado
           <View key = {result.id}>
             <Image 
@@ -45,6 +47,5 @@ export default function EmCartaz() {
           </View>
         ))}
       </ScrollView>
-        </View>
     )
 }
